@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>TypeScript Greeter</title>
+
+    <meta charset="utf-8">
+    <base target="_blank" />
+    <!-- open all links in new window/tab -- be careful and don't use if you want to link somewhere in your own application -->
+
+    <!--reload page when local js or css changes-->
+    <script type="text/javascript" src="http://livejs.com/live.js"></script>
+
+</head>
+
+<body>
+
+    <p> This demonstrates two view models in one view. They need to be bound to different elements<br/>
+        <a href='http://stackoverflow.com/questions/9293761/knockoutjs-multiple-viewmodels-in-a-single-view'>more info here</a><br/>
+        <a href='http://knockoutjs.com/documentation/observables.html'>and here</a>
+    </p>
+    <hr/>
+    <!--wrap view model in div-->
+    <div id='vm1'>
+        <h2>ViewModel1</h2>
+        <p>Hello from
+            <strong data-bind="text: language">todo</strong> and
+            <strong data-bind="text: framework">todo</strong>!
+        </p>
+        <p>Language: <input data-bind="value: language" /></p>
+        <p>Framework: <input data-bind="value: framework" /></p>
+    </div>
+
+
+    <hr/>
+
+    <!--wrap view model in div-->
+    <div id='vm2'>
+        <h2>ViewModel2</h2>
+
+        <input data-bind="value: firstName" />
+        <input data-bind="value: lastName" />
+        <p>Full name:
+            <span data-bind="text: fullName"></span>
+        </p>
+    </div>
+
+    <hr/>
+
+
+    <script src="./externals/require.js"></script>
+    <script src="./built/require-config.js"></script>
+    <script>
+        require(["externals/d3.min"]);
+        require(["externals/jquery.min"]);
+        require(["externals/lodash.min"]);
+        require(["built/main"]);
+    </script>
+</body>
+
+</html>
