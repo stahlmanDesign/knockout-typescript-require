@@ -15,8 +15,8 @@ import * as ko from "knockout";
 // region of the page.
 
 class ViewModel1 {
-    language: KnockoutObservable<string>
-    framework: KnockoutObservable<string>
+    language = ko.observable(''); // language: KnockoutObservable<string> // alternative syntax 
+    framework = ko.observable(''); // framework: KnockoutObservable<string> // alternative syntax 
 
     constructor(language: string, framework: string) {
         this.language = ko.observable(language);

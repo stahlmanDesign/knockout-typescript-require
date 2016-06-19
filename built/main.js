@@ -14,6 +14,8 @@ define(["require", "exports", "knockout"], function (require, exports, ko) {
     // region of the page.
     var ViewModel1 = (function () {
         function ViewModel1(language, framework) {
+            this.language = ko.observable(''); // language: KnockoutObservable<string> // alternative syntax 
+            this.framework = ko.observable(''); // framework: KnockoutObservable<string> // alternative syntax 
             this.language = ko.observable(language);
             this.framework = ko.observable(framework);
         }
